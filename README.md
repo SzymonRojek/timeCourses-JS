@@ -18,6 +18,8 @@ Check time of the course - vanilla JS (in progress)
 
 ---
 
+Counting duration of the course "Master JavaScripts - contains three modules, created by Adam, Marcin and Przemek.
+
 <br>
 
 ```js
@@ -37,14 +39,14 @@ Check time of the course - vanilla JS (in progress)
   <tr>
     <td><img src="./src/img/npm-icon.png" width="50" height="50"></td>
     <td><img src="./src/img/parcelJs-icon.png" width="50" height="50"></td>
-    <td><img src="./src/img/sass-icon.svg" width="50" height="50"></td>
-    <td><img src="./src/img/flexbox-icon.png" width="50" height="50"></td>
+    <!-- <td><img src="./src/img/sass-icon.svg" width="50" height="50"></td> -->
+    <!-- <td><img src="./src/img/flexbox-icon.png" width="50" height="50"></td> -->
   </tr>
 </table>
 <table>
   <tr>
     <td><img src="./src/img/html-icon.svg" width="50" height="50"></td>
-    <td><img src="./src/img/css-icon.svg" width="50" height="50"> </td>
+    <!-- <td><img src="./src/img/css-icon.svg" width="50" height="50"> </td> -->
     <td><img src="./src/img/js-icon.svg" width="50" height="50"></td>
   </tr>
  </table>
@@ -57,9 +59,7 @@ Check time of the course - vanilla JS (in progress)
 
 ---
 
-- Semantic HTML
-- BEM methodology
-- RWD
+Vanilla JS
 
 <br>
 
