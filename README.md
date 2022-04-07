@@ -9,28 +9,27 @@ Check time of the course - vanilla JS (in progress)
 <br>
 <br>
 
-<!-- <img src="" width="250" height="400"> -->
-
-<br>
-<br>
-
 ## Description:
 
 ---
 
-Counting duration of the course "Master JavaScripts - contains three modules, created by Adam, Marcin and Przemek.
+Counting duration of the course "Master of JavaScripts - the course contains three modules created by Adam, Marcin and Przemek.
+
+The main **goal** of the task is to create an details object, which collect all important data as a final data after all callculation.
+
+Also, I wanted to create some functions in the convention of pure functions.
+
+All functionality is in the main block, which ends in the **init function**.
 
 <br>
 
-```js
-...
-```
-
-<br>
-
-## Technologies:
+## I have used:
 
 ---
+
+- vanilla JavaScript
+- SCSS
+- BEM
 
 <br>
 <br>
@@ -39,27 +38,14 @@ Counting duration of the course "Master JavaScripts - contains three modules, cr
   <tr>
     <td><img src="./src/img/npm-icon.png" width="50" height="50"></td>
     <td><img src="./src/img/parcelJs-icon.png" width="50" height="50"></td>
-    <!-- <td><img src="./src/img/sass-icon.svg" width="50" height="50"></td> -->
-    <!-- <td><img src="./src/img/flexbox-icon.png" width="50" height="50"></td> -->
   </tr>
 </table>
 <table>
   <tr>
     <td><img src="./src/img/html-icon.svg" width="50" height="50"></td>
-    <!-- <td><img src="./src/img/css-icon.svg" width="50" height="50"> </td> -->
     <td><img src="./src/img/js-icon.svg" width="50" height="50"></td>
   </tr>
  </table>
-
-<br>
-
-## I have used:
-
-<br>
-
----
-
-Vanilla JS
 
 <br>
 
