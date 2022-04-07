@@ -1,4 +1,4 @@
-export const getTotalDuration = (duration) => {
+const getTotalDuration = (duration) => {
   const secondsPerMinute = 60;
 
   return duration
@@ -10,3 +10,5 @@ export const getTotalDuration = (duration) => {
       0
     );
 };
+
+export default getTotalDuration;

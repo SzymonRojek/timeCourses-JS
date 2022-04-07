@@ -1,4 +1,4 @@
-export const countSeconds = (duration) => {
+const countSeconds = (duration) => {
   const splited = duration.split(":");
   const secondsPerMinute = 60;
 
@@ -10,3 +10,5 @@ export const countSeconds = (duration) => {
 
   return totalSeconds;
 };
+
+export default countSeconds;
