@@ -39,12 +39,8 @@ import { countMinutesAndHours, getDuration } from "../helpers";
   };
 
   const init = () => {
-    // getSecondsForModules(modulesDetails, lessons);
-    // getHoursAndMinutesModules(modulesDetails);
-    // getTotalAndPercentage(modulesDetails, lessons);
     totalDuration(modulesDetails, lessons);
     renderText(modulesDetails);
-    console.log(modulesDetails);
   };
 
   init();
