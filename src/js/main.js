@@ -1,50 +1,23 @@
 import { lessons } from "./lessons";
 import { modulesDetails } from "./modulesDetails";
-import {
-  countSeconds,
-  countMinutesAndHours,
-  getTotalDuration,
-} from "../helpers";
+import { countMinutesAndHours, getDuration } from "../helpers";
 
 {
-  function getSecondsForModules(modulesDetails, lessons) {
-    lessons.map((lesson) => {
-      const { name, length } = lesson;
+  function totalDuration(finalData, lessons) {
+    const totalDuration = getDuration(lessons);
 
-      modulesDetails.forEach((module) => {
-        if (name.startsWith(module.prefix)) {
-          const { seconds } = module;
-          const oneLessonLength = countSeconds(length);
-          module.seconds = oneLessonLength + seconds;
-        }
-      });
-    });
-  }
-
-  function getHoursAndMinutesModules(modulesDetails) {
-    modulesDetails.forEach((module) => {
-      const [minutes, hours] = countMinutesAndHours(module.seconds);
-      module.minutes = minutes;
-      module.hours = hours;
-    });
-  }
-
-  function getTotalAndPercentage(modulesDetails, lessons) {
-    const totalDuration = getTotalDuration(lessons);
-    const [minutes, hours] = countMinutesAndHours(totalDuration);
-
-    modulesDetails.forEach((module) => {
-      if (module.prefix === "all") {
-        module.seconds = module.seconds + totalDuration;
-        module.minutes = minutes;
-        module.hours = hours;
-      }
-
+    finalData.forEach(({ prefix, seconds, minutes, hours, percent }) => {
+      const module = lessons.filter(({ name }) => name.startsWith(prefix));
+      const durationModule = getDuration(module);
+      const [minutesModule, hoursModule] = countMinutesAndHours(durationModule);
       const percentagePerModule = Math.trunc(
-        (module.seconds / totalDuration) * 100
+        (durationModule / totalDuration) * 100
       );
 
-      module.percent = module.percent + percentagePerModule;
+      seconds = durationModule;
+      minutes = minutesModule;
+      hours = hoursModule;
+      percent = percentagePerModule;
     });
   }
 
@@ -66,10 +39,7 @@ import {
   };
 
   const init = () => {
-    getSecondsForModules(modulesDetails, lessons);
-    getHoursAndMinutesModules(modulesDetails);
-    getTotalAndPercentage(modulesDetails, lessons);
-
+    totalDuration(modulesDetails, lessons);
     renderText(modulesDetails);
   };
 
