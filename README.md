@@ -18,7 +18,7 @@ Counting duration of the course "Master of JavaScripts - the course contains thr
 The main **goal** of the task:
 
 - fill the final object with generated data after all callculations
-- display data on the screen
+- display all information from the final object data on the screen
 
 I created some functions in the convention of pure functions. All functionality is in the main block, which ends in the **init function**.
 
