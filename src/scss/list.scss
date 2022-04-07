@@ -12,4 +12,13 @@
   &__text {
     color: $orange;
   }
+
+  &__tutor {
+    display: inline-block;
+    border-bottom: 2px solid $color-primary;
+
+    &::first-letter {
+      color: $color-primary;
+    }
+  }
 }

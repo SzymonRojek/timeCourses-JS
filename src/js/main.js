@@ -51,7 +51,7 @@ import { modulesDetails } from "./modulesDetails";
       .map(
         (module) =>
           `<li class="list"><span class="list__title">${module.title}</span><span class="list__text">
-          done by ${module.tutor} takes ${module.hours} hours & ${module.minutes} minutes - it is ${module.percent} % of the course!</span>
+          done by <span class="list__tutor">${module.tutor}</span> takes ${module.hours} hours & ${module.minutes} minutes - it is ${module.percent} % of the course!</span>
       </li>`
       )
       .join("");
@@ -64,7 +64,7 @@ import { modulesDetails } from "./modulesDetails";
     getSecondsForModules(modulesDetails, lessons);
     getHoursAndMinutesModules(modulesDetails);
     getTotalAndPercentage(modulesDetails, lessons);
-
+    console.log("a");
     renderText(modulesDetails);
   };
 
