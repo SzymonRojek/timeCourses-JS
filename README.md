@@ -15,11 +15,12 @@ Check time of the course - vanilla JS (in progress)
 
 Counting duration of the course "Master of JavaScripts - the course contains three modules created by Adam, Marcin and Przemek.
 
-The main **goal** of the task is to create an details object, which collect all important data as a final data after all callculation.
+The main **goal** of the task:
 
-Also, I wanted to create some functions in the convention of pure functions.
+- fill the final object with generated data after all callculations
+- display data on the screen
 
-All functionality is in the main block, which ends in the **init function**.
+I created some functions in the convention of pure functions. All functionality is in the main block, which ends in the **init function**.
 
 <br>
 
