@@ -26,11 +26,14 @@ import { countMinutesAndHours, getDuration } from "../helpers";
       .map((module, i) => {
         const { title, tutor, hours, minutes, percent } = module;
 
-        return `<li class="list"><span class="list__title">${title}</span><span class="list__text">
-          done by <span class="list__tutor">${tutor}</span> takes ${hours} hours & ${minutes} minutes ${
-          i === 0 ? "!" : `- ${percent} % of the total course!`
-        } </span>
-      </li>`;
+        return `
+            <li class="list">
+              <p class="list__title">${title}
+              <span class="list__text">done by <span class="list__tutor">${tutor}</span> 
+              takes ${hours} hours & ${minutes} minutes
+              ${i === 0 ? "" : ` - ${percent} % of the total course`}!</p>
+            </li>
+        `;
       })
       .join("");
 
