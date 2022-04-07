@@ -6,17 +6,15 @@ import { modulesDetails } from "./modulesDetails";
 
 {
   function getSecondsForModules(modulesDetails, lessons) {
-    lessons.forEach((lesson) => {
+    lessons.map((lesson) => {
       const { name, length } = lesson;
 
-      for (const module of modulesDetails) {
-        let { seconds } = module;
-
+      modulesDetails.forEach((module) => {
         if (name.startsWith(module.prefix)) {
           const oneLessonLength = countSeconds(length);
           module.seconds = seconds += oneLessonLength;
         }
-      }
+      });
     });
   }
 
