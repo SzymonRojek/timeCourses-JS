@@ -2,7 +2,7 @@ export const modulesDetails = [
   {
     title: "Master of JavaScript",
     tutor: "good friends",
-    prefix: "all",
+    prefix: "",
     seconds: 0,
     minutes: 0,
     hours: 0,
