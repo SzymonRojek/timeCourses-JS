@@ -51,7 +51,7 @@ import { modulesDetails } from "./modulesDetails";
     const messageToHtml = finalData
       .map(
         (module) =>
-          `<li class="form__list-error">
+          `<li class="list">
       ${module.title} done by ${module.tutor} takes ${module.hours} hours & ${module.minutes} minutes - it is ${module.percent} % of the course!
       </li>`
       )
