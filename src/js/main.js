@@ -48,18 +48,15 @@ import { modulesDetails } from "./modulesDetails";
 
   const renderText = (finalData) => {
     const messageToHtml = finalData
-      .map(
-        (module, i) =>
-          `<li class="list"><span class="list__title">${
-            module.title
-          }</span><span class="list__text">
-          done by <span class="list__tutor">${module.tutor}</span> takes ${
-            module.hours
-          } hours & ${module.minutes} minutes ${
-            i === 0 ? "!" : `- ${module.percent} % of the total course!`
-          } </span>
-      </li>`
-      )
+      .map((module, i) => {
+        const { title, tutor, hours, minutes, percent } = module;
+
+        return `<li class="list"><span class="list__title">${title}</span><span class="list__text">
+          done by <span class="list__tutor">${tutor}</span> takes ${hours} hours & ${minutes} minutes ${
+          i === 0 ? "!" : `- ${percent} % of the total course!`
+        } </span>
+      </li>`;
+      })
       .join("");
 
     const messageElement = document.querySelector(".js-message");
