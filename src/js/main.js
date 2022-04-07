@@ -56,7 +56,7 @@ import { modulesDetails } from "./modulesDetails";
           done by <span class="list__tutor">${module.tutor}</span> takes ${
             module.hours
           } hours & ${module.minutes} minutes ${
-            i === 0 ? "!" : `- it takes ${module.percent} % of the course!`
+            i === 0 ? "!" : `- ${module.percent} % of the total course!`
           } </span>
       </li>`
       )
