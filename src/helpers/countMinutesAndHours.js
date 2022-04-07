@@ -1,10 +1,10 @@
-function countMinutesAndHours(seconds) {
+export function countMinutesAndHours(seconds) {
   const secondsPerHour = 3600;
   const secondsPerMinute = 60;
-  const minutesModule = ~~((seconds % secondsPerHour) / secondsPerMinute);
-  const hoursModule = ~~(seconds / secondsPerHour);
+  const minutes = ~~((seconds % secondsPerHour) / secondsPerMinute);
+  const hours = ~~(seconds / secondsPerHour);
 
-  return [minutesModule, hoursModule];
+  return [minutes, hours];
 }
 
 export default countMinutesAndHours;
