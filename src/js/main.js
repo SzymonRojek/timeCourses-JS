@@ -6,18 +6,18 @@ import { countMinutesAndHours, getDuration } from "../helpers";
   function totalDuration(finalData, lessons) {
     const totalDuration = getDuration(lessons);
 
-    finalData.forEach(({ prefix, seconds, minutes, hours, percent }) => {
-      const module = lessons.filter(({ name }) => name.startsWith(prefix));
+    finalData.forEach((data) => {
+      const module = lessons.filter(({ name }) => name.startsWith(data.prefix));
       const durationModule = getDuration(module);
-      const [minutesModule, hoursModule] = countMinutesAndHours(durationModule);
+      const [minutes, hours] = countMinutesAndHours(durationModule);
       const percentagePerModule = Math.trunc(
         (durationModule / totalDuration) * 100
       );
 
-      seconds = durationModule;
-      minutes = minutesModule;
-      hours = hoursModule;
-      percent = percentagePerModule;
+      data.seconds = durationModule;
+      data.minutes = minutes;
+      data.hours = hours;
+      data.percent = percentagePerModule;
     });
   }
 
@@ -39,8 +39,12 @@ import { countMinutesAndHours, getDuration } from "../helpers";
   };
 
   const init = () => {
+    // getSecondsForModules(modulesDetails, lessons);
+    // getHoursAndMinutesModules(modulesDetails);
+    // getTotalAndPercentage(modulesDetails, lessons);
     totalDuration(modulesDetails, lessons);
     renderText(modulesDetails);
+    console.log(modulesDetails);
   };
 
   init();
