@@ -49,9 +49,15 @@ import { modulesDetails } from "./modulesDetails";
   const renderText = (finalData) => {
     const messageToHtml = finalData
       .map(
-        (module) =>
-          `<li class="list"><span class="list__title">${module.title}</span><span class="list__text">
-          done by <span class="list__tutor">${module.tutor}</span> takes ${module.hours} hours & ${module.minutes} minutes - it is ${module.percent} % of the course!</span>
+        (module, i) =>
+          `<li class="list"><span class="list__title">${
+            module.title
+          }</span><span class="list__text">
+          done by <span class="list__tutor">${module.tutor}</span> takes ${
+            module.hours
+          } hours & ${module.minutes} minutes ${
+            i === 0 ? "!" : `- it takes ${module.percent} % of the course!`
+          } </span>
       </li>`
       )
       .join("");
