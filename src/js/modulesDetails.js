@@ -27,7 +27,7 @@ export const modulesDetails = [
     percent: 0,
   },
   {
-    title: "In the world of Fameworks",
+    title: "In the world of Frameworks",
     tutor: "Marcin",
     prefix: "[3",
     seconds: 0,
