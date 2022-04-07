@@ -1,6 +1,6 @@
 export const modulesDetails = [
   {
-    title: "Master JavaScript",
+    title: "Master of JavaScript",
     tutor: "good friends",
     prefix: "all",
     seconds: 0,
