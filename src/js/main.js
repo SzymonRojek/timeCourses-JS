@@ -1,8 +1,10 @@
 import { lessons } from "./lessons";
-import { countSeconds } from "../helpers/countSeconds";
-import { countMinutesAndHours } from "../helpers/countMinutesAndHours.js";
-import { getTotalDuration } from "../helpers/getTotalDuration";
 import { modulesDetails } from "./modulesDetails";
+import {
+  countSeconds,
+  countMinutesAndHours,
+  getTotalDuration,
+} from "../helpers";
 
 {
   function getSecondsForModules(modulesDetails, lessons) {
@@ -67,7 +69,7 @@ import { modulesDetails } from "./modulesDetails";
     getSecondsForModules(modulesDetails, lessons);
     getHoursAndMinutesModules(modulesDetails);
     getTotalAndPercentage(modulesDetails, lessons);
-    console.log("a");
+
     renderText(modulesDetails);
   };
 
