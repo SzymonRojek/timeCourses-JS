@@ -1,6 +1,8 @@
 export function countMinutesAndHours(seconds) {
-  const minutes = ~~((seconds % 3600) / 60);
-  const hours = ~~(seconds / 3600);
+  const secondsPerHour = 3600;
+  const secondsPerMinute = 60;
+  const minutes = ~~((seconds % secondsPerHour) / secondsPerMinute);
+  const hours = ~~(seconds / secondsPerHour);
 
   return [minutes, hours];
 }
