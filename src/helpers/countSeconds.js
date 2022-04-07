@@ -1,10 +1,11 @@
 export const countSeconds = (duration) => {
   const splited = duration.split(":");
+  const seconds = 60;
 
-  const seconds = splited.reduce(
-    (acc, currVal, i) => acc + (i % 2 === 0 ? +currVal * 60 : +currVal),
+  const totalSeconds = splited.reduce(
+    (acc, currVal, i) => acc + (i % 2 === 0 ? +currVal * seconds : +currVal),
     0
   );
 
-  return seconds;
+  return totalSeconds;
 };
