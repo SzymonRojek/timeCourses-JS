@@ -1,0 +1,10 @@
+.header {
+  padding: 20px;
+  &__heading {
+    font-size: 40px;
+    color: $color-tertiary;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+  }
+}
