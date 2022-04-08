@@ -1,18 +1,16 @@
 import { lessons } from "./lessons";
 import { modulesDetails } from "./modulesDetails";
-import { countMinutesAndHours, getDuration } from "../helpers";
+import { countMinutesAndHours, countDuration, countPercent } from "../helpers";
 
 {
   function totalDuration(finalData, lessons) {
-    const totalDuration = getDuration(lessons);
+    const totalDuration = countDuration(lessons);
 
     finalData.forEach((data) => {
       const module = lessons.filter(({ name }) => name.startsWith(data.prefix));
-      const durationModule = getDuration(module);
+      const durationModule = countDuration(module);
       const [minutes, hours] = countMinutesAndHours(durationModule);
-      const percentagePerModule = Math.trunc(
-        (durationModule / totalDuration) * 100
-      );
+      const percentagePerModule = countPercent(durationModule, totalDuration);
 
       data.seconds = durationModule;
       data.minutes = minutes;
