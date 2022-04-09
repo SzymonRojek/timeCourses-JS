@@ -4,7 +4,7 @@ const countDuration = (duration) => {
   return duration
     .map(({ length }) => length.split(":"))
     .flat(Infinity)
-    .map((el) => +el)
+    .map((el) => Number(el))
     .reduce((acc, currVal, i) => {
       const seconds = i % 2 === 0 ? currVal * secondsPerMinute : currVal;
       return acc + seconds;
